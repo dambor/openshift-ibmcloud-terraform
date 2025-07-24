@@ -183,75 +183,8 @@ ibmcloud is subnets --vpc $(terraform output -raw vpc_id)
 ibmcloud is public-gateways
 ```
 
-## Deployment Timeline
-
-- **VPC & Networking:** ~5 minutes
-- **OpenShift Master:** ~15-20 minutes  
-- **Worker Nodes:** ~10-15 minutes
-- **OpenShift Setup:** ~5-10 minutes
-- **Total:** ~35-50 minutes
-
-## Cost Estimates
-
-Monthly costs in us-south region:
-
-### Standard Setup (3 zones, 2 workers each)
-- **6 worker nodes (bx2.4x16):** ~$480/month
-- **OpenShift license:** ~$540/month  
-- **VPC infrastructure:** ~$50/month
-- **Storage:** ~$30/month
-- **Total:** ~**$1,100/month**
-
-### Cost-Optimized (2 zones, 1 worker each)
-- **2 worker nodes (bx2.2x8):** ~$120/month
-- **OpenShift license:** ~$540/month
-- **VPC infrastructure:** ~$30/month  
-- **Storage:** ~$20/month
-- **Total:** ~**$710/month**
-
-### With Hibernation (50% usage)
-- **Standard setup:** ~$550-600/month
-- **Cost-optimized:** ~$355-400/month
-
-*Costs may vary by region and actual usage*
-
-## What's Next?
-
-Now you can:
-- **Deploy applications** via the web console or CLI
-- **Use OperatorHub** to install operators
-- **Set up CI/CD pipelines** with OpenShift Pipelines
-- **Configure monitoring** with built-in Prometheus
-- **Enable service mesh** with OpenShift Service Mesh
-- **Set up storage** with OpenShift Data Foundation
-
 ## Cleanup
-
-```bash
-# Hibernate (keeps cluster, saves money)
-./cluster-hibernate.sh hibernate
 
 # Destroy everything (maximum savings)
 terraform destroy
 ```
-
-## Support
-
-- **Terraform issues:** Check the Terraform documentation
-- **IBM Cloud issues:** Check IBM Cloud documentation  
-- **OpenShift issues:** Check Red Hat OpenShift documentation
-- **Cost optimization:** Use the hibernation script or consider smaller worker nodes
-
-## Files Overview
-
-```
-.
-├── main.tf                    # Main Terraform configuration
-├── variables.tf               # Input variables
-├── outputs.tf                 # Output values  
-├── terraform.tfvars           # Your configuration
-├── cluster-hibernate.sh       # Cost-saving hibernation script
-└── README.md                  # This file
-```
-
-Happy OpenShifting! 🚀
