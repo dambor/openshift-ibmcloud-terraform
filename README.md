@@ -185,6 +185,6 @@ ibmcloud is public-gateways
 
 ## Cleanup
 
-# Destroy everything (maximum savings)
+```
 terraform destroy
 ```
