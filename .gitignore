@@ -1,0 +1,139 @@
+# .gitignore for OpenShift on IBM Cloud Terraform Project
+
+# Terraform files
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+!*.tfvars.example
+.terraform/
+.terraform.lock.hcl
+terraform.rc
+.terraformrc
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# API Keys and Secrets
+*api-key*
+*secret*
+*password*
+*token*
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# IBM Cloud CLI
+.bluemix/
+.ibmcloud/
+
+# SSH keys
+*.pem
+*.key
+*.pub
+id_rsa*
+id_ed25519*
+known_hosts
+
+# Backup files
+*.backup
+*.bak
+*~
+
+# Archive files
+*.tar.gz
+*.zip
+*.rar
+
+# Local configuration overrides
+config.local.*
+local.tf
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Kubernetes config files
+kubeconfig
+*.kubeconfig
+.kube/
+
+# Hibernation script temp files
+/tmp/*_original_counts.txt
+
+# Coverage reports
+*.cover
+*.coverage
+
+# Python cache (if using Python tools)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Node modules (if using Node.js tools)
+node_modules/
+npm-debug.log
+
+# Terraform docs
+*.md.tmp
+
+# Local test files
+test/
+tests/
+*test*
+
+# Documentation build artifacts
+docs/_build/
+site/
+
+# Local scripts and notes
+scratch/
+notes.txt
+todo.txt
+*.notes
+
+# Helm charts (if used)
+*.tgz
+charts/*/charts/
+charts/*/requirements.lock
+
+# OpenShift templates
+templates/local/
+
+# Local development overrides
+docker-compose.override.yml
+.docker/.terraform/
